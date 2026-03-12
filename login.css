@@ -1,0 +1,394 @@
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:sans-serif;
+    background:url("photo/visualsofdana-T5pL6ciEn-I-unsplash.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.4);
+padding:10px 40px;
+z-index:1000;
+transition:top 0.3s;
+}
+
+.nav{
+display:flex;
+padding-left: 150px;
+gap:40px;
+}
+
+.nav a{
+text-decoration:none;
+}
+
+.nav button{
+background:none;
+border:none;
+color:white;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+opacity:0.7;
+transition:0.3s;
+}
+
+.nav button:hover{
+opacity:1;
+transform:scale(1.1);
+}
+
+.logo{
+position:absolute;
+left:20px;
+top:50%;
+transform:translateY(-50%);
+}
+.lang-selector {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+}
+
+#selected-lang {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  margin-right: 100px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+#selected-lang .flag {
+  width: 30px;
+  height: 20px;
+  
+}
+
+.lang-options {
+  display: none;
+  position: absolute;
+  top: 35px;
+   margin-right: 100px;
+  margin-top: 20px;
+  right: 0;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.lang-options .flag-option {
+  width: 30px;
+  height: 20px;
+  margin: 3px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lang-options .flag-option:hover {
+  transform: scale(1.2);
+}
+
+.logo img{
+width:130px;
+height:auto;
+display:block;
+}
+
+
+.login img{
+    width:95px;
+    height:95px;
+    padding-left: 50px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login img:hover{
+    transform:scale(1.15);
+}
+
+.login-wrap{
+    width:100%;
+    max-width:525px;
+    min-height:670px;
+    margin:170px auto;
+    position:relative;
+    background:url("https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg");
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 12px 15px rgba(0,0,0,0.24),
+               0 17px 50px rgba(0,0,0,0.19);
+}
+
+.login-html{
+    width:100%;
+    height:100%;
+    position:absolute;
+    padding:90px 70px 50px 70px;
+    background:rgba(40,57,101,0.9);
+}
+
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    transform:rotateY(180deg);
+    backface-visibility:hidden;
+    transition:0.4s;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+    display:none;
+}
+
+.login-html .tab{
+    font-size:22px;
+    margin:0 15px 10px 0;
+    padding-bottom:5px;
+    display:inline-block;
+    cursor:pointer;
+    border-bottom:2px solid transparent;
+}
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+    color:white;
+    border-color:#1161ee;
+}
+
+.login-form{
+    min-height:345px;
+    position:relative;
+    perspective:1000px;
+    transform-style:preserve-3d;
+}
+
+.login-form .group{
+    margin-bottom:15px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+    width:100%;
+    display:block;
+    color:white;
+}
+
+.login-form .group .input,
+.login-form .group .button{
+    border:none;
+    padding:15px 20px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.1);
+}
+
+.login-form .group .label{
+    font-size:12px;
+    color:#aaa;
+}
+
+.login-form .group .button{
+    background:rgb(193, 164, 3);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.login-form .group .button:hover{
+    transform: scale(1.1);
+    background: rgb(154, 131, 2);
+}
+
+.login-form .group input[data-type="password"]{
+    -webkit-text-security:circle;
+}
+
+.login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    display:inline-block;
+    position:relative;
+    background:rgba(255,255,255,0.1);
+}
+
+.login-form .group label .icon::before,
+.login-form .group label .icon::after{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:2px;
+    background:white;
+    transition:0.2s;
+}
+
+.login-form .group label .icon::before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    transform:scale(0);
+}
+
+.login-form .group label .icon::after{
+    top:6px;
+    right:0;
+    transform:scale(0);
+}
+
+.login-form .group .check:checked + label{
+    color:white;
+}
+
+.login-form .group .check:checked + label .icon{
+    background:#1161ee;
+}
+
+.login-form .group .check:checked + label .icon::before{
+    transform:scale(1) rotate(45deg);
+}
+
+.login-form .group .check:checked + label .icon::after{
+    transform:scale(1) rotate(-45deg);
+}
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    transform:rotate(0);
+}
+
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+    transform:rotate(0);
+}
+
+.hr{
+    height:2px;
+    margin:60px 0 50px;
+    background:rgba(255,255,255,0.2);
+}
+
+.foot-lnk{
+    text-align:center;
+    transition:0.3s;
+}
+
+.foot-lnk:hover{
+    transform:scale(1.15);
+}
+
+.footer{
+    background:#0b0d3b;
+    opacity:0.9;
+    color:white;
+    padding-top:60px;
+    margin-top:140px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:auto;
+    gap:50px;
+    padding:0 20px;
+    flex-wrap:wrap;
+}
+
+.footer-section{
+    flex:1;
+    min-width:220px;
+}
+
+.footer-section h3{
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+.footer-section p{
+    color:#cfcfcf;
+    line-height:1.6;
+}
+
+.footer-section a{
+    display:block;
+    text-decoration:none;
+    color:#cfcfcf;
+    margin-bottom:10px;
+    transition:0.3s;
+}
+
+.footer-section a:hover{
+    color:#ffd000;
+}
+
+.newsletter{
+    margin-top:15px;
+    display:flex;
+}
+
+.newsletter input{
+    flex:1;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:4px 0 0 4px;
+}
+
+.newsletter button{
+    background:#ffd000;
+    border:none;
+    padding:10px 18px;
+    border-radius:0 4px 4px 0;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.newsletter button:hover{
+    background:#e6be00;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.1);
+    margin-top:40px;
+    padding:20px;
+    text-align:center;
+    color:#aaa;
+    font-size:14px;
+}
+
+.footer-bottom a{
+    color:#ffd000;
+    text-decoration:none;
+    margin:0 5px;
+}

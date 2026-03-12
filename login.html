@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css" />
+  <title data-en="Form" data-ka="ფორმა" data-ru="Форма">Form</title>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <!-- Logo -->
+  <div class="logo">
+    <img src="photo/ChatGPT Image Mar 13, 2026, 01_17_28 AM.png" alt="Luxury Hotel Logo">
+  </div>
+
+  <!-- Language selector -->
+  <div class="lang-selector">
+    <button id="selected-lang">
+      <img src="photo/great-britain-flag-flag-england-vector-icon-united-kingdom-flag-great-britain-10-eps_800531-104.avif" alt="English" class="flag">
+      ▼
+    </button>
+    <div id="lang-options" class="lang-options">
+      <img src="photo/great-britain-flag-flag-england-vector-icon-united-kingdom-flag-great-britain-10-eps_800531-104.avif" alt="English" data-lang="en" class="flag-option">
+      <img src="photo/Flag_of_Georgia.svg.png" alt="Georgian" data-lang="ka" class="flag-option">
+      <img src="photo/flag-russia-flag-nation_979270-2735.avif" alt="Russian" data-lang="ru" class="flag-option">
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#"><button data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</button></a>
+    <a href="#"><button data-en="Rooms" data-ka="ოთახები" data-ru="Номера">Rooms</button></a>
+    <a href="#"><button data-en="Book" data-ka="დაჯავშნა" data-ru="Бронирование">Book</button></a>
+    <a href="#"><button data-en="Contact" data-ka="კონტაქტი" data-ru="Контакты">Contact</button></a>
+  </nav>
+
+  <!-- Login -->
+  <div class="login">
+    <a href="login.html">
+      <img src="photo/White user icon for .png" alt="Login">
+    </a>
+  </div>
+</header>
+
+<!-- LOGIN FORM -->
+<div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+    <label for="tab-1" class="tab" data-en="Sign In" data-ka="შესვლა" data-ru="Вход">Sign In</label>
+
+    <input id="tab-2" type="radio" name="tab" class="sign-up">
+    <label for="tab-2" class="tab" data-en="Sign Up" data-ka="რეგისტრაცია" data-ru="Регистрация">Sign Up</label>
+
+    <div class="login-form">
+      <!-- Sign In -->
+      <div class="sign-in-htm">
+        <div class="group"> 
+          <label for="user" class="label" data-en="Username" data-ka="მომხმარებლის სახელი" data-ru="Имя пользователя">Username</label>
+          <input id="user" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label" data-en="Password" data-ka="პაროლი" data-ru="Пароль">Password</label>
+          <input id="pass" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <input id="check" type="checkbox" class="check" checked>
+          <label for="check"><span class="icon"></span> 
+            <span data-en="Keep me Signed in" data-ka="დამიმახსოვრე" data-ru="Запомнить меня">Keep me Signed in</span>
+          </label>
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign In" data-en="Sign In" data-ka="შესვლა" data-ru="Вход">
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <a href="#forgot" data-en="Forgot Password?" data-ka="პაროლი დაივიწყეთ?" data-ru="Забыли пароль?">Forgot Password?</a>
+        </div>
+      </div>
+
+      <!-- Sign Up -->
+      <div class="sign-up-htm">
+        <div class="group">
+          <label for="user" class="label" data-en="Username" data-ka="მომხმარებლის სახელი" data-ru="Имя пользователя">Username</label>
+          <input id="user" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="pass" class="label" data-en="Password" data-ka="პაროლი" data-ru="Пароль">Password</label>
+          <input id="pass" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <label for="pass" class="label" data-en="Repeat Password" data-ka="გაიმეორეთ პაროლი" data-ru="Повторите пароль">Repeat Password</label>
+          <input id="pass" type="password" class="input" data-type="password">
+        </div>
+        <div class="group">
+          <label for="pass" class="label" data-en="Email Address" data-ka="ელ-ფოსტა" data-ru="Электронная почта">Email Address</label>
+          <input id="pass" type="text" class="input">
+        </div>
+        <div class="group">
+          <input type="submit" class="button" value="Sign Up" data-en="Sign Up" data-ka="რეგისტრაცია" data-ru="Регистрация">
+        </div>
+        <div class="hr"></div>
+        <div class="foot-lnk">
+          <label for="tab-1" data-en="Already Member?" data-ka="უკვე რეგისტრირებული ხართ?" data-ru="Уже зарегистрированы?">Already Member?</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3 data-en="Contact Us" data-ka="დაგვიკავშირდით" data-ru="Свяжитесь с нами">Contact Us</h3>
+      <p>info@luxuryhotel.com</p>
+      <p>+1 (800) 123-4567</p>
+      <p data-en="123 Paradise Road, Oceanview, CA 98765" data-ka="123 პარადაისი, ოკენვიუ, CA 98765" data-ru="123 Парадиз Роуд, Оушнвью, CA 98765">123 Paradise Road,<br> Oceanview, CA 98765</p>
+    </div>
+
+    <div class="footer-section">
+      <h3 data-en="Quick Links" data-ka="საჩქარო ლინკები" data-ru="Быстрые ссылки">Quick Links</h3>
+      <a href="#" data-en="Home" data-ka="მთავარი" data-ru="Главная">Home</a>
+      <a href="#" data-en="Rooms" data-ka="ოთახები" data-ru="Номера">Rooms</a>
+      <a href="#" data-en="Book" data-ka="დაჯავშნა" data-ru="Бронирование">Book</a>
+      <a href="#" data-en="Contact" data-ka="კონტაქტი" data-ru="Контакты">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h3 data-en="Follow Us" data-ka="გვიპოვეთ" data-ru="Подписывайтесь">Follow Us</h3>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+      <a href="#">TripAdvisor</a>
+    </div>
+
+    <div class="footer-section">
+      <h3 data-en="Newsletter" data-ka="ახალ ამბები" data-ru="Новости">Newsletter</h3>
+      <p data-en="Subscribe to our newsletter for exclusive offers & updates." data-ka="გამოწერა ექსკლუზიური შეთავაზებებისთვის" data-ru="Подпишитесь на нашу рассылку, чтобы получать эксклюзивные предложения и новости.">
+        Subscribe to our newsletter for exclusive offers & updates.
+      </p>
+      <div class="newsletter">
+        <input type="email" placeholder="Enter your email">
+        <button data-en="Subscribe" data-ka="გამოწერა" data-ru="Подписаться">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Luxury Hotel. All rights reserved.</p>
+    <p>
+      <a href="#" data-en="Privacy Policy" data-ka="კონფიდენციალურობის პოლიტიკა" data-ru="Политика конфиденциальности">Privacy Policy</a> |
+      <a href="#" data-en="Terms & Conditions" data-ka="წესები და პირობები" data-ru="Правила и условия">Terms & Conditions</a>
+    </p>
+  </div>
+</footer>
+
+<script src="racxa.js"></script>
+</body>
+</html>
